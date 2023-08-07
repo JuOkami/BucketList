@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<h1 >{{ wish.titre }}</h1>
+    <p class="texteParagraphe">{{ wish.description }}</p>
+    <p s>by {{ wish.author }} le {{ wish.dateCreated|date("m/d/Y") }}</p>
+{% endblock %}
+
+{% block title %}
+
+{% endblock %}
+

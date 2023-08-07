@@ -2,8 +2,9 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+        <title>{% block title %}Bucket List{% endblock %}</title>
+        <link rel="icon" href="{{ asset ('images/favicon-32x32.png')}}">
+        <link rel="stylesheet" href="{{ asset('CSS/style.css') }}"
         {% block stylesheets %}
         {% endblock %}
 
@@ -11,6 +12,24 @@
         {% endblock %}
     </head>
     <body>
+    <header>
+        <nav>
+            <div class="ensembleNav">
+            <img id="logosite" src="{{ asset('images/logo-512.png') }}">
+            <span class="titrenav">Bucket-List</span>
+            </div>
+            <div class="liensNav">
+                <a class="lienNav" href="/">Accueil</a>
+                <a class="lienNav" href="/aboutus">About Us</a>
+                <a class="lienNav" href="/wish/list">Wish</a>
+            </div>
+        </nav>
+    </header>
+    <main>
         {% block body %}{% endblock %}
+    </main>
+    <footer>
+        © Bucket-List {{ "now" | date('Y') }}
+    </footer>
     </body>
 </html>

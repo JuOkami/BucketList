@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>
+    Les fondateurs
+    </h1>
+
+    <div  class="membres">
+    {% for fondateur in fichierFondateurs %}
+        <div class="ficheFondateur">
+        <img class="illustrationFondateur" src="{{ fondateur.picture }}">
+        <p>{{ fondateur.firstname }} {{ fondateur.lastname }}</p>
+            <p>Né le {{ fondateur.dateOfBirth|date("m/d/Y") }}</p>
+            <p>{{ fondateur.description }}</p>
+        </div>
+    {% endfor %}
+    </div>
+
+{% endblock %}
+

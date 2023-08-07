@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<p class="texteParagraphe">Liste des choses à faire avant le décès</p>
+    <div class="wishlist">
+    {% for wish in wishes %}
+    <a class="lienNav" href="{{ path('wish_detail', {'wish':wish.id}) }}">
+       -> {{ wish.titre }}
+    </a>
+    {% endfor %}
+    </div>
+{% endblock %}
+
+{% block title %}
+
+{% endblock %}
+
