@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+*{
+    font-family: 'Caveat', cursive;
+}
+
+#logosite{
+    max-height: 50px;
+    margin-top: 2px;
+}
+
+nav {
+    padding-left: 50px;
+    background-color: #FFC6A1;
+    min-height: 50px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    border : solid 2px #f8a46f
+}
+
+.lienNav {
+    font-size: 2em;
+    text-decoration: inherit;
+    color: inherit;
+    border-bottom : 0px;
+    transition: 1s all;
+}
+
+.lienNav:hover{
+    color : #484848;
+    text-decoration: underline;
+}
+
+
+
+.titrenav{
+    font-size: 3em;
+}
+
+
+
+body {
+    background-color:#E3CEB3;
+}
+
+main {
+    min-height: 80vh;
+}
+
+footer {
+    text-align: center;
+    font-size: 1.5em;
+}
