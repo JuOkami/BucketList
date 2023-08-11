@@ -3,7 +3,11 @@
 {% block body %}
 <h1 >{{ wish.titre }}</h1>
     <p class="texteParagraphe">{{ wish.description }}</p>
-    <p s>by {{ wish.author }} le {{ wish.dateCreated|date("m/d/Y") }}</p>
+    <p s>by {{ wish.author }} le {{ wish.dateCreated|date("d/m/Y") }}</p>
+    <a href="{{ path('wish_valider', {'wish':wish.id}) }}" class="grosBouton">
+        {% if wish.isPublished %}Souhait exaucé !{% endif %}
+        {% if wish.isPublished == false %}Non exaucé !{% endif %}
+    </a>
 {% endblock %}
 
 {% block title %}

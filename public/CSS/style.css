@@ -96,3 +96,48 @@ a{
     text-decoration: inherit;
     color: inherit;
 }
+
+.boiteFormulaire{
+    display: flex;
+    flex-direction: column;
+}
+
+#wish > div {
+    display: flex;
+    flex-direction: row;
+    justify-content:left;
+    margin-left: 100px;
+    margin-top: 20px;
+}
+
+.grosBouton{
+    font-size: 2em;
+    color: black;
+    background-color: #FFC6A1;
+    border-radius: 10px;
+    border : solid 2px #f8a46f;
+    margin-left: 100px;
+    margin-top: 10px;
+    padding: 5px;
+}
+
+.grosBouton:hover{
+    color : white;
+    cursor : pointer;
+    background-color: #f8a46f;
+    border : solid 2px #FFC6A1;
+    transition: all 0.2s;
+}
+
+.champFormulaire{
+    border-radius: 5px;
+    border : solid 2px #f8a46f;
+    background-color: #FFC6A1;
+    margin-left: 5px;
+    font-size: 1.3em;
+}
+
+.champFormulaire:focus{
+    background-color: white;
+    outline : solid 2px #f8a46f;
+}
