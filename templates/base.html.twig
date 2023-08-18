@@ -15,8 +15,19 @@
     <header>
         <nav>
             <div class="ensembleNav">
-            <img id="logosite" src="{{ asset('images/logo-512.png') }}">
-            <span class="titrenav">Bucket-List</span>
+                <div>
+                <img id="logosite" src="{{ asset('images/logo-512.png') }}">
+                <span class="titrenav">Bucket-List</span>
+                </div>
+                <div>
+                    {% if not app.user %}
+                        <a class="lienNav" href="{{ path('app_login') }}">Se connecter</a>
+                    {% endif %}
+                    {% if app.user %}
+                        <span class="lienNav">{{ app.user.email }}</span>
+                        <a class="lienNav" href="{{ path('app_logout') }}">Se déconnecter</a>
+                    {% endif %}
+                </div>
             </div>
             <div class="liensNav">
                 <a class="lienNav" href="/">Accueil</a>
@@ -24,6 +35,8 @@
                 <a class="lienNav" href="/wish/list">Wish</a>
                 <a class="lienNav" href="/wish/creation">Créer un nouveau souhait</a>
                 <a class="lienNav" href="/wish/listexauce">Souhaits exaucés</a>
+
+
             </div>
         </nav>
     </header>

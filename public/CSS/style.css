@@ -141,3 +141,9 @@ a{
     background-color: white;
     outline : solid 2px #f8a46f;
 }
+
+.ensembleNav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

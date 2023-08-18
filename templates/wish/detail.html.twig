@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-<h1 >{{ wish.titre }}</h1>
+<h1 >{{ wish.titre }} <span style="font-size : 0.8em;"> ({{ wish.categorie.nom }})</span></h1>
     <p class="texteParagraphe">{{ wish.description }}</p>
     <p s>by {{ wish.author }} le {{ wish.dateCreated|date("d/m/Y") }}</p>
     <a href="{{ path('wish_valider', {'wish':wish.id}) }}" class="grosBouton">

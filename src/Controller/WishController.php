@@ -18,7 +18,7 @@ class WishController extends AbstractController
     #[Route('/list', name: '_list')]
     public function wishliste(WishRepository $wishRepository): Response
     {
-        $wishes = $wishRepository->findBy(["isPublished" => true],["dateCreated"=>"ASC"]);
+        $wishes = $wishRepository->findAllPublished();
 
         return $this->render('wish/liste.html.twig', [
             'wishes' => $wishes,
@@ -29,7 +29,7 @@ class WishController extends AbstractController
     #[Route('/listexauce', name: '_listexauce')]
     public function wishlisteexauce(WishRepository $wishRepository): Response
     {
-        $wishes = $wishRepository->findBy(["isPublished" => false],["dateCreated"=>"ASC"]);
+        $wishes = $wishRepository->findBy(['isPublished' => 0], ['dateCreated'=> 'DESC']);
 
         return $this->render('wish/listeexauce.html.twig', [
             'wishes' => $wishes,

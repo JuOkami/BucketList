@@ -5,7 +5,7 @@
     <div class="wishlist">
     {% for wish in wishes %}
     <a class="lienNav" href="{{ path('wish_detail', {'wish':wish.id}) }}">
-       -> {{ wish.titre }}
+        -> {{ wish.titre }}<span style="font-size : 0.8em;"> ({{ wish.categorie.nom }})</span>
     </a>
     {% endfor %}
     </div>
